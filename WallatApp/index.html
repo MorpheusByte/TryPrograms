@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+    <title>My Wallet App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>My Wallet App <i class="fa-regular fa-credit-card"></i></h1>
+      <form id="harcamaForm">
+        <h2>Harcama Formu</h2>
+        <div class="tarih-miktar">
+          <div class="date">
+            <label for="date">Tarih</label>
+            <input type="date" name="date" id="date" />
+          </div>
+          <div class="harcama_miktari">
+            <label for="harcama_miktari">Harcama Miktari</label>
+            <input
+              type="number"
+              name="harcama_miktari"
+              id="harcama_miktari"
+              placeholder="1000 $"
+            />
+          </div>
+        </div>
+        <div class="harcama_alani">
+          <label for="harcama_alani">Harcama Alani</label>
+          <input
+            type="text"
+            name="harcama_alani"
+            id="harcama_alani"
+            placeholder="Kira, Fatura, Kredi Karti"
+          />
+        </div>
+        <div class="div-btn-kaydet">
+          <button class="btn-kaydet">Kaydet</button>
+        </div>
+      </form>
+      <div class="gelir">
+        <input
+          type="text"
+          name="gelir"
+          id="gelir"
+          placeholder="Gelirinizi giriniz"
+        />
+        <button class="btn-ekle">Ekle</button>
+      </div>
+      <table id="harcamaTablosu">
+        <thead>
+          <tr>
+            <th>Tarih</th>
+            <th>Harcama Alanı</th>
+            <th>Miktar</th>
+            <th>İşlem</th>
+          </tr>
+        </thead>
+        <tbody>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+    color: rgb(198, 198, 20);
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+.container h2 {
+    text-align: center;
+}
+
+form{
+    border: 1px solid rgba(115, 113, 113, 0.288);
+    border-radius: 5px;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+label{
+    display: block;
+}
+input{
+    border: 1px solid rgba(115, 113, 113, 0.288);
+    border-radius: 5px;
+    height: 30px;
+    padding: 10px;
+}
+
+.tarih-miktar{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.tarih-miktar input{
+    width: 50vh;
+}
+.harcama_alani input{
+    width: 100%;
+}
+
+.div-btn-kaydet{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.btn-kaydet{
+    background-color: red;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    width: 60px;
+    height: 30px;
+}
+#gelir{
+    width: 94%;
+    margin-top: 20px;
+}
+.btn-ekle{
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    height: 30px;
+    width: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
