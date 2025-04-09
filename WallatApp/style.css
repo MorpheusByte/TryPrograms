@@ -4,8 +4,14 @@
     box-sizing: border-box;
 }
 h1{
+    margin-top: 20px;
     text-align: center;
     color: rgb(198, 198, 20);
+}
+.fa-credit-card{
+    color: rgb(81, 136, 203);
+    font-size: 1.5rem;
+    margin-left: 10px;
 }
 
 .container{
@@ -22,6 +28,7 @@ form{
     width: 100%;
     margin: auto;
     padding: 20px;
+    margin-top: 40px;
 }
 label{
     display: block;
@@ -29,7 +36,7 @@ label{
 input{
     border: 1px solid rgba(115, 113, 113, 0.288);
     border-radius: 5px;
-    height: 30px;
+    height: 40px;
     padding: 10px;
 }
 
@@ -37,10 +44,13 @@ input{
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
+    gap:20px
 }
-
+.tarih-miktar > div {
+    flex: 1; /* Eşit alanı paylaşırlar */
+  }
 .tarih-miktar input{
-    width: 50vh;
+    width: 100%;
 }
 .harcama_alani input{
     width: 100%;
@@ -57,19 +67,26 @@ input{
     border-radius: 5px;
     border: none;
     color: white;
-    width: 60px;
-    height: 30px;
+    width: 70px;
+    height: 40px;
 }
-#gelir{
-    width: 94%;
+
+.gelir{
+    display: flex;
+    gap:10px;
     margin-top: 20px;
 }
-.btn-ekle{
+
+#gelir{
+    width: 94%;
+
+}
+#btn-ekle{
     background-color: green;
     color: white;
     border-radius: 5px;
-    height: 30px;
-    width: 50px;
+    height: 40px;
+    width: 60px;
 }
 
 table {
@@ -83,3 +100,30 @@ table {
     padding: 8px;
     text-align: center;
   }
+
+  .ozet-kutu {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .ozet-tablosu {
+    width: 300px;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ozet-tablosu th,
+  .ozet-tablosu td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .ozet-tablosu tr:nth-child(odd){
+    background-color: #f9f9f9;
+    width: 150px;
+  }
+  

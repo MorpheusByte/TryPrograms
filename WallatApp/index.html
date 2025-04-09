@@ -12,7 +12,16 @@
   </head>
   <body>
     <div class="container">
+
+        <!--! ------------------------------- -->
+        <!--!             BASLIK              -->
+        <!--! ------------------------------- -->
+
       <h1>My Wallet App <i class="fa-regular fa-credit-card"></i></h1>
+
+        <!--! ------------------------------- -->
+        <!--!             FORM              -->
+        <!--! ------------------------------- -->
       <form id="harcamaForm">
         <h2>Harcama Formu</h2>
         <div class="tarih-miktar">
@@ -43,6 +52,10 @@
           <button class="btn-kaydet">Kaydet</button>
         </div>
       </form>
+
+        <!--! ------------------------------- -->
+        <!--!             GELIR              -->
+        <!--! ------------------------------- -->
       <div class="gelir">
         <input
           type="number"
@@ -50,9 +63,15 @@
           id="gelir"
           placeholder="Gelirinizi giriniz"
         />
-        <button class="btn-ekle">Ekle</button>
+        <button id="btn-ekle">Ekle</button>
       </div>
-      <table id="harcamaTablosu">
+
+        <!--! ------------------------------- -->
+        <!--!        HARCAMA TABLOSU           -->
+        <!--! ------------------------------- -->
+<div id="harcama-tablo-alani"></div>
+
+       <table id="harcamaTablosu">
         <thead>
           <tr>
             <th>Tarih</th>
@@ -62,6 +81,32 @@
           </tr>
         </thead>
         <tbody>
+            <!-- Harcamalar buraya eklenecek  -->
+        </tbody> 
+        </table>
+        <!--! ------------------------------- -->
+        <!--!             OZET TABLO          -->
+        <!--! ------------------------------- -->
+        <div class="ozet-kutu">
+            <table class="ozet-tablosu">
+              <tbody>
+                <tr>
+                  <th>Toplam Gelir</th>
+                  <td><span id="toplam-gelir"></span> $</td>
+                </tr>
+                <tr>
+                  <th>Toplam Gider</th>
+                  <td><span id="toplam-gider"></span> $</td>
+                </tr>
+                <tr>
+                  <th>Kalan</th>
+                  <td><span id="kalan"></span> $</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          
     </div>
     <script src="./script.js"></script>
   </body>
