@@ -24,3 +24,13 @@ const giderinizTable = document.getElementById("gideriniz");
 
 
 const kalanTable = document.getElementById("kalan");
+
+
+//? Variables
+
+let harcamaListesi = []
+let gelirler = 0
+
+//! İlk formu doldurma
+
+
