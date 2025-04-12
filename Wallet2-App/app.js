@@ -33,4 +33,30 @@ let gelirler = 0
 
 //! İlk formu doldurma
 
+harcamaFormu.addEventListener("submit", (e)=> {
+    e.preventDefault()
+    harcamaListesi.push({
+        id:new Date().getTime(),
+        tarih:tarihInput.value,
+        miktar:miktarInput.value,
+        türü: harcamaAlaniInput.value,
+    })
+    harcamaListesi.push(yeniHarcama);
+    console.log(harcamaListesi);
 
+    harcamayıDomaYaz(yeniHarcama)
+})
+
+//! harcamaları DOM a bastırma
+
+const harcamayıDomaYaz = ({id,tarih,miktar,türü}) =>{
+    harcamaBody.innerHTML += `
+    <tr>
+    <td class="bg-warning">${tarih}</td>
+    <td class="bg-warning">${türü}</td>
+    <td class="bg-warning">${miktar}</td>
+    
+    </tr>
+    
+    `
+}
