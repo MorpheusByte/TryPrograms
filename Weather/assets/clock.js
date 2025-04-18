@@ -1,5 +1,6 @@
 function updateClock() {
     const now = new Date();
+    // console.log(now)
     let hours = now.getHours();
     let minutes = now.getMinutes();
     let seconds = now.getSeconds();
