@@ -2,49 +2,51 @@
 const form = document.querySelector("form");
 const input = document.querySelector("form input");
 const cardContainer = document.getElementById("card-container")
+const alertMessage = document.getElementById("alert")
 
-// console.log(input);
+// console.log(input)
 
-//! Variable
-// const apiKey = '47d2bf9cf0fc638765792e3f9d510309'
-// localStorage.setItem("apiKey", '47d2bf9cf0fc638765792e3f9d510309')
+//! Variables
+// const apiKey = 'a9d5e78ea485c1a78e987a3528327c09'
+// localStorage.setItem("apiKey", 'a9d5e78ea485c1a78e987a3528327c09') //apiKey i local storage e kaydeder.
 
-const apiKey = localStorage.getItem("apiKey")
+const apiKey = localStorage.getItem("apiKey"); // apiKey i local storage den alır.
 
 let url;
-let units = 'metric' 
-// fahrenayt için imperial yazmalıyız
+let units = "metric"; // fahrenheit için 'imperial' yazmalıyız
 
-form.addEventListener("submit", (e)=>{
-    e.preventDefault()
-    // console.log(input.value); kullanıcının girdiği veri
+//! Event Listeners
 
-    const city = input.value
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  // console.log(input.value) kullanıcının girdiği veri
 
-    url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
+  const city = input.value;
 
-    // console.log(url);
+  url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
-    getWeatherData()
-    form.reset()
-})
+  // console.log(url)
 
+  getWeatherData()
+  form.reset();
+});
 
 //^ Functions
 
 const getWeatherData = async () => {
-    try {
-        const response = await fetch(url).then((response)=> response.json())
-        console.log(response);
+  try {
+    const response = await fetch(url).then((response)=> response.json()) //fetch ile istek atma
+    // console.log(response) // API dan gelen hava durumu bilgiler
 
-        //? Data destructure
+    //? Data destructure
 
-        const {main, name, weather[0].description ,sys} = response
-    } catch (error) {
-        
-    }
+    const {main, name, weather, sys } = response //& fetch
 
+    console.log(main, name, weather[0].description, sys.country)
 
 
 
-}
+
+
+  } catch (error) {}
+};
