@@ -16,8 +16,23 @@ form.addEventListener("submit", (e)=>{
 
     const city = input.value
 
-    url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&${units}`
+    url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
 
-    console.log(url);
+    // console.log(url);
     form.reset()
 })
+
+
+//^ Functions
+
+const getWeatherData = async () => {
+    try {
+        
+    } catch (error) {
+        
+    }
+
+
+
+
+}
